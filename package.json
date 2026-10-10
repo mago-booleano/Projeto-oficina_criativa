@@ -1,0 +1,18 @@
+{
+  "name": "feira-oficinas-criativas",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "python -m http.server 8000"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "description": "Sistema de Oficinas Criativas",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
