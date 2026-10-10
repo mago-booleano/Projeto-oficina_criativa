@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feira de Oficinas Criativas</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1>Feira de Oficinas Criativas</h1>
+      <p>Sistema de gerenciamento de oficinas, instrutores e participantes</p>
+    </header>
+
+    <main class="container">
+      <section class="painel">
+        <h2>1. Cadastrar oficina</h2>
+        <form id="formOficina">
+          <label>
+            Nome da oficina
+            <input type="text" id="nomeOficina" required />
+          </label>
+          <label>
+            Área
+            <input type="text" id="areaOficina" required />
+          </label>
+          <label>
+            Duração (horas)
+            <input type="number" id="duracaoOficina" min="1" required />
+          </label>
+          <button type="submit">Salvar oficina</button>
+        </form>
+      </section>
+
+      <section class="painel">
+        <h2>2. Cadastrar instrutor</h2>
+        <form id="formInstrutor">
+          <label>
+            Nome
+            <input type="text" id="nomeInstrutor" required />
+          </label>
+          <label>
+            E-mail
+            <input type="email" id="emailInstrutor" required />
+          </label>
+          <label>
+            Oficina vinculada
+            <select id="oficinaInstrutor" required>
+              <option value="">Selecione uma oficina</option>
+            </select>
+          </label>
+          <button type="submit">Salvar instrutor</button>
+        </form>
+      </section>
+
+      <section class="painel">
+        <h2>3. Cadastrar participante</h2>
+        <form id="formParticipante">
+          <label>
+            Nome
+            <input type="text" id="nomeParticipante" required />
+          </label>
+          <label>
+            E-mail
+            <input type="email" id="emailParticipante" required />
+          </label>
+          <label>
+            Idade
+            <input type="number" id="idadeParticipante" min="1" required />
+          </label>
+          <label>
+            Oficina
+            <select id="oficinaParticipante" required>
+              <option value="">Selecione uma oficina</option>
+            </select>
+          </label>
+          <button type="submit">Salvar participante</button>
+        </form>
+      </section>
+
+      <section class="painel painel-longo">
+        <h2>4. Listar oficinas</h2>
+        <div id="listaOficinas" class="lista"></div>
+      </section>
+
+      <section class="painel painel-longo">
+        <h2>5. Listar participantes de uma oficina</h2>
+        <label>
+          Escolha a oficina
+          <select id="oficinaParticipanteLista">
+            <option value="">Selecione uma oficina</option>
+          </select>
+        </label>
+        <div id="listaParticipantes" class="lista"></div>
+      </section>
+    </main>
+
+    <script type="module" src="./dist/main.js"></script>
+  </body>
+</html>
